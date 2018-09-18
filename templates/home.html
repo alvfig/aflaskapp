@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flask app</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- <link rel="stylesheet" href="style.css" media="all"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+  <div class="w3-container w3-teal">
+    <h1>{{msg}}</h1>
+  </div>
+  <form action="/" method="POST" class="w3-container">
+    {{form.csrf_token}}
+    <p>{{form.name.label}}{{form.name(class="w3-input w3-border")}}</p>
+    <p>{{form.phone.label}}{{form.phone(class="w3-input w3-border")}}</p>
+    <p>{{form.email.label}}{{form.email(class="w3-input w3-border")}}</p>
+    <p>{{form.submit(class="w3-btn w3-teal")}}</p>
+  </form>
+</body>
+</html>

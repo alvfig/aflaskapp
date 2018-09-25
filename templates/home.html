@@ -1,3 +1,5 @@
+{% from "_render_field.html" import render_field %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +16,9 @@
   </div>
   <form action="/" method="POST" class="w3-container">
     {{form.csrf_token}}
-    <p>{{form.name.label}}{{form.name(class="w3-input w3-border")}}</p>
-    <p>{{form.phone.label}}{{form.phone(class="w3-input w3-border")}}</p>
-    <p>{{form.email.label}}{{form.email(class="w3-input w3-border")}}</p>
+    <p>{{ render_field(form.name, class="w3-input w3-border") }}</p>
+    <p>{{ render_field(form.phone, class="w3-input w3-border") }}</p>
+    <p>{{ render_field(form.email, class="w3-input w3-border") }}</p>
     <p>{{form.submit(class="w3-btn w3-teal")}}</p>
   </form>
 </body>
